@@ -23,22 +23,10 @@ div{
     background-color: #dddddd;
   }
 
-  .create_repo{
-      color:#71B0CF
-  }
-  .observe_repo{
+  .space_down{
     margin-top : 40px;
-    color : #558AA4;
   }
-  .working_branches{
-    margin-top : 40px;
-    color : #98CB4E;
-  }
-  .changing{
-    margin-top : 40px;
-    color : #6E9D2F;
-  }
-  .synchronize, .temp_commits{
-    margin-top : 40px;
-    color: #EF693B;
+
+  .orange_title{
+    color : #EF693B;
   }
