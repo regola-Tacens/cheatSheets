@@ -1,0 +1,25 @@
+{
+  "name": "CheatSheets",
+  "description": "cheatsheet extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting","tabs"],
+  "action": {
+    "default_popup": "/popups/popup.html",
+    "default_icon": {
+      "16": "/images/list16.png",
+      "32": "/images/list32.png",
+      "48": "/images/list48.png",
+      "128": "/images/list128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/list16.png",
+    "32": "/images/list32.png",
+    "48": "/images/list48.png",
+    "128": "/images/list128.png"
+  }
+}

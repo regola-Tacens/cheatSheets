@@ -1,0 +1,44 @@
+body{
+    padding : 25px;
+    background-color: #3f3f3f;
+}
+h1{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #dddddd;
+}
+
+h2{
+    margin: 10px 0;
+}
+
+h3{
+    margin: 2px 0;
+}
+
+div{
+    margin : 10px 0;
+    padding : 10px;
+    border-radius: 5px;
+    background-color: #dddddd;
+  }
+
+  .create_repo{
+      color:#71B0CF
+  }
+  .observe_repo{
+    margin-top : 40px;
+    color : #558AA4;
+  }
+  .working_branches{
+    margin-top : 40px;
+    color : #98CB4E;
+  }
+  .changing{
+    margin-top : 40px;
+    color : #6E9D2F;
+  }
+  .synchronize, .temp_commits{
+    margin-top : 40px;
+    color: #EF693B;
+  }
