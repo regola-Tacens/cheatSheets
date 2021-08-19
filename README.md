@@ -4,6 +4,7 @@ le but de cette extension de navigateur _CHROME_ est de pouvoir avoir accès en 
 exemple :
 - commades du terminal linux, telle que ls, ls-a, ll
 - commandes de l'outil Git
+- expressions régulières RegEx
 
 ---
 ## installation de l'extension
@@ -13,3 +14,6 @@ exemple :
 3. Passez en ' Mode développeur ' en cochant la case correspondante en haut à droite de votre écran.
 4. en haut à gauche de la fen^tre ouverte, cliquez sur **charger l'extension non empaqutée**
 5. sélectionner le dossier "CheatSheets" contenant tous les fichiers de l'extension chrome" 
+
+## apercu
+![cheatsheet](./images/Preview.png)
