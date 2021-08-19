@@ -1,6 +1,16 @@
 body{
     padding : 25px;
     background-color: #3f3f3f;
+    display: flex;
+    align-items: center;
+}
+.navigation{
+  margin : 0 auto;
+  padding : 7px;
+  background-color: #292929;
+  position: fixed;
+  top : 5px;
+  border-radius: 5px;
 }
 h1{
     margin-top: 10px;
@@ -28,5 +38,27 @@ div{
   }
 
   .orange_title{
+    margin-top: 50px;
     color : #EF693B;
   }
+
+.inline{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.regex_item{
+  font-size: 1.2em;
+  font-weight: bolder;
+  color : #2d63f8;
+}
+.navButton{
+  padding: 3px 3px;
+  margin: 0 5px;
+  text-decoration: none;
+  color : white;
+  border-radius: 3px;
+}
+.navButton:hover{
+  background-color:#EF693B ;
+}

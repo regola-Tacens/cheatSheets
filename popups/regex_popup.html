@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/popup.css">
+    <title>REGEX</title>
+</head>
+<body>
+    <main>
+        <nav class="navigation">
+            <a href="#quantifiers" class="navButton">Quantifiers</a>
+            <a href="#anchors" class="navButton">Anchors</a>
+            <a href="#character" class="navButton">Characters</a>
+            <a href="#groups" class="navButton">Groups & range</a>
+            <a href="#patterns" class="navButton">Patterns</a>
+        </nav>
+
+        <h1>REGEX</h1>
+        <h2 class="orange_title" id="anchors">Anchors</h2> 
+            <div>
+                <span class="regex_item">^</span> Start of string, or start of line in multi-line pattern <br><hr>
+                <h3 class="inline">^dog</h3>begins with "dog"
+            </div>
+            <div>
+                <span class="regex_item">$</span> End of string, or end of line in multi-line pattern<br><hr>
+                <h3 class="inline">dog$</h3>ends with "dog"
+            </div>
+            <div>
+                <span class="regex_item">^</span> &nbsp;Start of string&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="regex_item">$</span> &nbsp;End of string<br><hr>
+                <h3 class="inline">^dog$</h3>is exactly "dog"
+            </div>
+            <div>
+                <span class="regex_item">\<</span> &nbsp;Start of word&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="regex_item">\></span> &nbsp;End of word<br><hr>
+                <h3 class="inline">\<.*\> </h3> will match any string bounded by word characters
+            </div>
+
+        <h2 class="orange_title space_down" id="character">Character Classes</h2>
+            <div>
+                <span class="regex_item">\s</span >&nbsp;&nbsp;White space<br><hr>
+                <h3 class="inline">\s*</h3>  any number of whitespace characters
+            </div>
+            <div>
+                <span class="regex_item">\S</span >&nbsp;&nbsp; No White space<br><hr>
+                <h3 class="inline">/\S/g</h3>  global search for non-whitespace characters in a string
+            </div>
+            <div>
+                <span class="regex_item">\d</span >&nbsp;&nbsp; Digit<br><hr>
+                <h3 class="inline">/\$\d</h3>  matches a string that has a $ before one digit
+            </div>
+            <div>
+                <span class="regex_item">\D</span >&nbsp;&nbsp; No digit<br><hr>
+                <h3 class="inline">/\D/g</h3>  Do a global search for digits ( same result as [^0-9] )
+            </div>
+            <div>
+                <span class="regex_item">\w</span >&nbsp;&nbsp; matches a word character (alphanumeric character plus underscore)<br><hr>
+                <h3 class="inline">\w</h3>  Outputs the same result as [A-Za-z0-9_]
+            </div>
+            <div>
+                <span class="regex_item">\W</span >&nbsp;&nbsp; not word<br><hr>
+                <h3 class="inline">\w</h3>  Outputs the same result as [^A-Za-z0-9_]
+            </div>
+
+        <h2 class="orange_title space_down" id="quantifiers">Quantifiers</h2>
+            <div>
+                <span class="regex_item">*</span >&nbsp;&nbsp; 0 or more<br><hr>
+                <h3 class="inline">abc*</h3>  matches a string that has ab followed by zero or more c
+            </div>
+            <div>
+                <span class="regex_item">+</span >&nbsp;&nbsp; 1 or more<br><hr>
+                <h3 class="inline">abc+</h3>  matches a string that has ab followed by one or more c
+            </div>
+            <div>
+                <span class="regex_item">?</span >&nbsp;&nbsp; 0 or 1<br><hr>
+                <h3 class="inline">abc?</h3>  matches a string that has ab followed by ero or one c
+            </div>
+            <div>
+                <span class="regex_item">{3}</span >&nbsp;&nbsp; Exactly 3<br><hr>
+                <h3 class="inline">abc{2}</h3>  matches a string that has ab followed by 2 c
+            </div>
+            <div>
+                <span class="regex_item">{3,}</span >&nbsp;&nbsp; 3 or more<br><hr>
+                <h3 class="inline">abc{2,}</h3>  matches a string that has ab followed by 2 or more c
+            </div>
+            <div>
+                <span class="regex_item">{3,5}</span >&nbsp;&nbsp; 3, 4 or 5<br><hr>
+                <h3 class="inline">abc{2,5}</h3>  matches a string that has ab followed by 2 up to 5 c
+            </div>
+
+        <h2 class="orange_title space_down" id="groups">Groups and Ranges</h2>
+            <div>
+                <span class="regex_item">.</span >&nbsp;&nbsp; Any character except new line (\n)<br><hr>
+                <h3 class="inline"><.+?></h3>  matches any character one or more times included inside < and >
+            </div>
+            <div>
+                <span class="regex_item">(a|b)</span >&nbsp;&nbsp; a or b<br><hr>
+                <h3 class="inline">^.*\b(one|two|three)\b.*$ </h3> matches a complete line of text that contains any of the words “one”, “two” or “three”
+            </div>
+            <div>
+                <span class="regex_item">(...)</span >&nbsp;&nbsp; group a part of the regular expression together. This allows you to apply a quantifier to the entire group<br><hr>
+                <h3 class="inline"> Set(Value)? </h3> matches Set or SetValue
+            </div>
+            <div>
+                <span class="regex_item">(?...)</span >&nbsp;&nbsp; Non capturing group<br><hr>
+                <h3 class="inline"> a(?:bc)* </h3> using ?: we disable the capturing group
+            </div>
+            <div>
+                <span class="regex_item">[abc]</span >&nbsp;&nbsp; Range (a or b or c)<br><hr>
+                <h3 class="inline"> [a-zA-Z]</h3> a through z or A through Z, inclusive (range)
+            </div>
+            <div>
+                <span class="regex_item">[^abc]</span >&nbsp;&nbsp;Not (a or b or c)<br><hr>
+                <h3 class="inline"> [^abc] 	</h3> any character _except_ a, b, or c (negation)
+            </div>
+            <div>
+                <span class="regex_item">[a-q]</span >&nbsp;&nbsp;Lower case letter from a to q<br>
+            </div>
+            <div>
+                <span class="regex_item">[A-Q]</span >&nbsp;&nbsp;Upper case letter from A to Q<br>
+            </div>
+            <div>
+                <span class="regex_item">[0-7]</span >&nbsp;&nbsp;Digit from 0 to 7<br>
+            </div>
+
+        <h2 class="orange_title space_down" id="patterns">Pattern modifiers</h2>
+            <div>
+                <span class="regex_item">g</span >&nbsp;&nbsp; Global match<br><hr>
+                <h3 class="inline">/D/g</h3>  matches all non-word characters globally
+            </div>
+            <div>
+                <span class="regex_item">i</span >&nbsp;&nbsp; Case-i­nse­nsitive<br><hr>
+                <h3 class="inline">/aBc/i</h3>  would match AbC
+            </div>
+            <div>
+                <span class="regex_item">m</span >&nbsp;&nbsp; Multiple lines<br><hr>
+                <h3 class="inline">/^\d/gm</h3>  takes a digit from the beginning of each line
+            </div>
+            <div>
+                <span class="regex_item">s</span >&nbsp;&nbsp; Treat string as single line
+            </div>
+
+    </main>
+</body>
+</html>
