@@ -7,7 +7,7 @@ console.log(sheet.id)
  sheet.addEventListener("click", async () => {
     try {
       // on efface le popup actif avant d'en créer un nouveau
-      await removeCurrentWindow();
+      removeCurrentWindow();
 
       // on crée le nouveau popup
       currentWindow = await chrome.windows.create({ 
@@ -17,7 +17,7 @@ console.log(sheet.id)
          width : 500 });
     
       // on enregistre l'objet crée dans storage pour pouvoir récuperer son Id et l'effacer plus atrd
-      chrome.storage.sync.set({currentWindow: currentWindow});
+      chrome.storage.sync.set({ currentWindow: currentWindow });
     } catch (error){
       console.error(error)
     }
