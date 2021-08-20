@@ -18,7 +18,9 @@
         </nav>
 
         <h1>REGEX</h1>
-        <h2 class="orange_title" id="anchors">Anchors</h2> 
+        <p id="anchors"></p>
+
+        <h2 class="orange_title space_down" >Anchors</h2> 
             <div>
                 <span class="regex_item">^</span> Start of string, or start of line in multi-line pattern <br><hr>
                 <h3 class="inline">^dog</h3>begins with "dog"
@@ -35,8 +37,9 @@
                 <span class="regex_item">\<</span> &nbsp;Start of word&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="regex_item">\></span> &nbsp;End of word<br><hr>
                 <h3 class="inline">\<.*\> </h3> will match any string bounded by word characters
             </div>
+            <p id="character"></p>
 
-        <h2 class="orange_title space_down" id="character">Character Classes</h2>
+        <h2 class="orange_title space_down" >Character Classes</h2>
             <div>
                 <span class="regex_item">\s</span >&nbsp;&nbsp;White space<br><hr>
                 <h3 class="inline">\s*</h3>  any number of whitespace characters
@@ -61,8 +64,9 @@
                 <span class="regex_item">\W</span >&nbsp;&nbsp; not word<br><hr>
                 <h3 class="inline">\w</h3>  Outputs the same result as [^A-Za-z0-9_]
             </div>
+            <p id="quantifiers"></p>
 
-        <h2 class="orange_title space_down" id="quantifiers">Quantifiers</h2>
+        <h2 class="orange_title space_down" >Quantifiers</h2>
             <div>
                 <span class="regex_item">*</span >&nbsp;&nbsp; 0 or more<br><hr>
                 <h3 class="inline">abc*</h3>  matches a string that has ab followed by zero or more c
@@ -87,8 +91,9 @@
                 <span class="regex_item">{3,5}</span >&nbsp;&nbsp; 3, 4 or 5<br><hr>
                 <h3 class="inline">abc{2,5}</h3>  matches a string that has ab followed by 2 up to 5 c
             </div>
+            <p id="groups"></p>
 
-        <h2 class="orange_title space_down" id="groups">Groups and Ranges</h2>
+        <h2 class="orange_title space_down" >Groups and Ranges</h2>
             <div>
                 <span class="regex_item">.</span >&nbsp;&nbsp; Any character except new line (\n)<br><hr>
                 <h3 class="inline"><.+?></h3>  matches any character one or more times included inside < and >

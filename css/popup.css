@@ -3,6 +3,7 @@ body{
     background-color: #3f3f3f;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .navigation{
   margin : 0 auto;
@@ -13,8 +14,8 @@ body{
   border-radius: 5px;
 }
 h1{
-    margin-top: 10px;
-    margin-bottom: 30px;
+    /* margin-top: 10px; */
+    /* margin-bottom: 30px; */
     color: #dddddd;
 }
 
@@ -31,16 +32,16 @@ div{
     padding : 10px;
     border-radius: 5px;
     background-color: #dddddd;
-  }
+}
 
-  .space_down{
-    margin-top : 40px;
-  }
+.space_down{
+  margin-top : 40px;
+}
 
-  .orange_title{
-    margin-top: 50px;
-    color : #EF693B;
-  }
+.orange_title{
+  margin-top: 50px;
+  color : #EF693B;
+}
 
 .inline{
   display: inline-block;

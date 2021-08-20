@@ -31,3 +31,5 @@ const removeCurrentWindow = ()=> {
     currentWindow.id && chrome.windows.remove(result.currentWindow.id)
   }); 
 }
+
+

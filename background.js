@@ -1,8 +1,9 @@
 // let color = '#ccc';
 
 // chrome.runtime.onInstalled.addListener(() => {
-//   chrome.storage.sync.set({ color });
-//   console.log('Default background color set to %cgreen', `color: ${color}`);
+  
+  
+// document.addEventListener('click', ()=>{ alert('ok')})
 // });
 
 
